@@ -220,7 +220,7 @@ $(() => {
 
 
 	// Профиль автора - Поделиться соц. сети
-	$('.author_profile .share .socials .btn').click(function (e) {
+	$('body').on('click', '.share .socials .btn', function (e) {
 		e.preventDefault()
 
 		$(this).toggleClass('active')
@@ -247,21 +247,33 @@ $(() => {
 
 	// Слайдер карточки обьявления
 	if ($('.ads_category .ad .swiper-container').length) {
-		new Swiper('.ads_category .ad .swiper-container', {
-			loop: true,
-			speed: 500,
-			watchSlidesVisibility: true,
-			slideActiveClass: 'active',
-			slideVisibleClass: 'visible',
-			spaceBetween: 0,
-			slidesPerView: 1,
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'bullets',
-				clickable: true,
-				bulletActiveClass: 'active'
-			}
-		})
+		var i = 0,
+			swiperSliders = new Swiper('.ads_category .ad .swiper-container', {
+				loop: true,
+				speed: 500,
+				watchSlidesVisibility: true,
+				slideActiveClass: 'active',
+				slideVisibleClass: 'visible',
+				spaceBetween: 0,
+				slidesPerView: 1,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					bulletActiveClass: 'active'
+				},
+				on: {
+					init: swiper => {
+						setTimeout(() => {
+							$(swiper.$el).find('.swiper-pagination-bullet').attr('data-slider', i)
+							i++
+
+							$('.swiper-pagination-bullet').on('mouseover', function () {
+								swiperSliders[parseInt($(this).data('slider'))].slideTo($(this).index() + 1)
+							})
+						})
+					}
+				}
+			})
 	}
 
 
@@ -387,6 +399,16 @@ $(() => {
 			return url
 		}
 	})
+
+
+	// Лимит символов в поле ввода
+	$('body').on('keydown', '.form .with_limit', function () {
+		let _self = $(this)
+
+		setTimeout(() => {
+			_self.closest('.line').find('.limit .current').text(_self.val().length)
+		})
+	})
 })
 
 
@@ -489,6 +511,11 @@ imagesShowFiles = function (files) {
 				+ '</div>'
 
 			$('.form .images.drop_files .selected').append(html)
+
+			if (!$('.form .images.drop_files .selected input:checked').length) {
+				$('.form .images.drop_files .selected .image:first input').prop('checked', true)
+			}
+
 			imagesCount++
 		}
 	})

@@ -540,6 +540,22 @@
     /*------------------
         Ads category
     ------------------*/
+    .ads_category .map_btn
+    {
+        height: 140px;
+        padding: 20px;
+    }
+
+    .ads_category .map_btn .btn
+    {
+        font-size: 12px;
+
+        padding: 13px 26px;
+
+        letter-spacing: 1px;
+    }
+
+
     .ads_category .row
     {
         --ads_count: 1;
@@ -594,6 +610,13 @@
     {
         width: 60%;
         padding: 14px;
+    }
+
+
+
+    .ads_category .add_ad_link
+    {
+        padding: 25px 20px;
     }
 
 
@@ -676,6 +699,11 @@
     /*-----------
         PopUp
     -----------*/
+    .fancybox-slide--html
+    {
+        padding: 12px;
+    }
+
     .fancybox-slide--html .fancybox-close-small
     {
         top: 15px;
@@ -761,6 +789,13 @@
         padding-right: 20px;
     }
 
+    #ad_info_modal .head .views
+    {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
     #ad_info_modal .gallery .slide
     {
         width: 100px;
@@ -786,5 +821,55 @@
         width: calc(100% + 40px);
         margin: 25px -20px 0;
         padding: 20px 20px 12px;
+    }
+
+
+
+    .ad_up_modal .title
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+    .ad_up_modal .links .buy_btn,
+    .ad_up_modal .links .cancel_btn
+    {
+        width: auto;
+    }
+
+
+
+    .buy_service_modal .form .place .label
+    {
+        max-width: calc(100% - 97px);
+        margin: 0 15px 0 0;
+    }
+
+
+
+    .modal .related_ads .list .ad .thumb
+    {
+        margin-bottom: 15px;
+    }
+
+    .modal .related_ads .list .ad .thumb + .info
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+    .modal .related_ads .list .ad .phone
+    {
+        font-size: 20px !important;
+        line-height: 24px !important;
+    }
+
+
+
+    #map_modal .map_wrap
+    {
+        height: 480px;
+        padding-bottom: 0;
     }
 }

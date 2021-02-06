@@ -264,6 +264,12 @@
     }
 
 
+    .block_head .clear_btn
+    {
+        top: 7px;
+    }
+
+
 
     /*------------------
         Form elements
@@ -691,5 +697,23 @@
     {
         font-size: 28px;
         line-height: 34px;
+    }
+
+
+
+    .ad_up_modal .icon
+    {
+        margin-bottom: 20px;
+    }
+
+    .ad_up_modal .title
+    {
+        font-size: 19px;
+        line-height: 27px;
+    }
+
+    .ad_up_modal .links
+    {
+        margin-top: 20px;
     }
 }

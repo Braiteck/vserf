@@ -110,11 +110,11 @@
 				<section class="mob_header">
 					<div class="cont">
 						<div class="logo">
-							<div>
+							<a href="/">
 								<div class="name">ВСЕ.РФ</div>
 								<div class="desc">БИРЖА УСЛУГ</div>
 								<img data-src="images/logo.svg" alt="" class="lozad">
-							</div>
+							</a>
 						</div>
 
 						<div class="support">
@@ -185,7 +185,7 @@
 													</div>
 												</div>
 
-												<a href="/" class="link">КУПИТЬ ЗА 199₽</a>
+												<button class="link modal_link" data-content="#buy_service_modal">КУПИТЬ ЗА 199₽</button>
 											</div>
 
 
@@ -205,7 +205,7 @@
 													</div>
 												</div>
 
-												<a href="/" class="link">КУПИТЬ ЗА 299₽</a>
+												<button class="link modal_link" data-content="#buy_service_modal2">КУПИТЬ ЗА 299₽</button>
 											</div>
 
 
@@ -225,7 +225,7 @@
 													</div>
 												</div>
 
-												<a href="/" class="link">КУПИТЬ ЗА 399₽</a>
+												<button class="link modal_link" data-content="#buy_service_modal">КУПИТЬ ЗА 399₽</button>
 											</div>
 
 
@@ -245,7 +245,7 @@
 													</div>
 												</div>
 
-												<a href="/" class="link">КУПИТЬ ЗА 999₽</a>
+												<button class="link modal_link" data-content="#buy_service_modal">КУПИТЬ ЗА 999₽</button>
 											</div>
 										</div>
 									</section>
@@ -351,7 +351,7 @@
 						<div>
 							<div class="name">ВСЕ.РФ</div>
 							<div class="desc">БИРЖА УСЛУГ</div>
-							<img data-src="images/footer_logo.svg" alt="" class="lozad">
+							<img data-src="images/logo.svg" alt="" class="lozad">
 						</div>
 					</div>
 
@@ -418,6 +418,64 @@
 		</section>
 
 
+		<section class="modal buy_service_modal" id="buy_service_modal">
+			<div class="modal_title">Выберите объявление для поднятия</div>
+
+			<div class="modal_data">
+				<form action="" class="form">
+					<div class="line">
+						<div class="field">
+							<select name="">
+								<option value="0" data-display=""></option>
+								<option value="1">Mitshubishi Lancer X 2012 состояние нового</option>
+								<option value="2">Mitshubishi Lancer X 2012 состояние нового</option>
+								<option value="3">Mitshubishi Lancer X 2012 состояние нового</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="submit">
+						<button type="submit" class="submit_btn">ПОДНЯТЬ ОБЪЯВЛЕНИЕ ЗА 999 РУБЛЕЙ</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+
+		<section class="modal buy_service_modal" id="buy_service_modal2">
+			<div class="modal_title">Автоматическое поднятие</div>
+
+			<div class="modal_data">
+				<form action="" class="form">
+					<div class="line">
+						<div class="label">Выберите объявление</div>
+
+						<div class="field">
+							<select name="">
+								<option value="0" data-display=""></option>
+								<option value="1">Mitshubishi Lancer X 2012 состояние нового</option>
+								<option value="2">Mitshubishi Lancer X 2012 состояние нового</option>
+								<option value="3">Mitshubishi Lancer X 2012 состояние нового</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="line row place">
+						<div class="label">Укажите место, ниже которого оно не должно опуститься</div>
+
+						<div class="field">
+							<input type="number" name="" value="" class="input" max="999" min="1" placeholder="153">
+						</div>
+					</div>
+
+					<div class="submit">
+						<button type="submit" class="submit_btn">КУПИТЬ АВТОМАТИЧЕСКОЕ ПОДНЯТИЕ ЗА 999 РУБЛЕЙ</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+
 		<!-- Подключение javascript файлов -->
 		<script src="js/jquery-3.5.0.min.js"></script>
 		<script src="js/lozad.min.js"></script>
@@ -426,6 +484,7 @@
 		<script src="js/nice-select.js"></script>
 		<script src="js/fancybox.min.js"></script>
 		<script src="js/clipboard.min.js"></script>
+		<script src="js/countdown.js"></script>
 		<script src="js/functions.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>

@@ -110,11 +110,11 @@
 				<section class="mob_header">
 					<div class="cont">
 						<div class="logo">
-							<div>
+							<a href="/">
 								<div class="name">ВСЕ.РФ</div>
 								<div class="desc">БИРЖА УСЛУГ</div>
 								<img data-src="images/logo.svg" alt="" class="lozad">
-							</div>
+							</a>
 						</div>
 
 						<div class="support">
@@ -166,44 +166,81 @@
 
 
 									<form action="" class="form">
-										<div class="columns">
-											<div class="line width2of3">
-												<div class="label">Имя*</div>
+										<div class="section">
+											<div class="columns">
+												<div class="line width2of3">
+													<div class="label">Имя*</div>
 
-												<div class="field">
-													<input type="text" name="" value="" class="input" placeholder="Петров Иван Иванович">
+													<div class="field">
+														<input type="text" name="" value="" class="input" placeholder="Петров Иван Иванович">
+													</div>
 												</div>
-											</div>
 
-											<div class="line width1of3">
-												<div class="label">Город*</div>
+												<div class="line width1of3">
+													<div class="label">Город*</div>
 
-												<div class="field">
-													<select name="">
-														<option value="1" selected>Волжский</option>
-														<option value="2">Вариант 2</option>
-														<option value="3">Вариант 3</option>
-														<option value="4">Вариант 4</option>
-														<option value="5">Вариант 5</option>
-													</select>
+													<div class="field">
+														<select name="">
+															<option value="1" selected>Волжский</option>
+															<option value="2">Вариант 2</option>
+															<option value="3">Вариант 3</option>
+															<option value="4">Вариант 4</option>
+															<option value="5">Вариант 5</option>
+														</select>
+													</div>
 												</div>
 											</div>
 										</div>
 
-										<div class="line photo">
+
+										<div class="section photo">
 											<div class="title">Фото профиля</div>
 
-											<div class="row">
-												<input type="file" name="photo" id="photo" accept="image/*" onchange="readFile(this)">
-												<label for="photo">
-													<svg class="empty_icon"><use xlink:href="images/sprite.svg#ic_image"></use></svg>
+											<div class="line">
+												<div class="row">
+													<input type="file" name="photo" id="photo" accept="image/*" onchange="readFile(this)">
+													<label for="photo">
+														<svg class="empty_icon"><use xlink:href="images/sprite.svg#ic_image"></use></svg>
 
-													<button type="button" class="delete"></button>
-												</label>
+														<button type="button" class="delete"></button>
+													</label>
 
-												<div class="exp">От фотографии зависит, какое первое впечатление вы произведёте на пользователей сервиса. Сфотографируйтесь как на паспорт, только с лёгкой улыбкой. Лучше всего — при естественном свете. Хорошая фотография вызовет у людей доверие.</div>
+													<div class="exp">От фотографии зависит, какое первое впечатление вы произведёте на пользователей сервиса. Сфотографируйтесь как на паспорт, только с лёгкой улыбкой. Лучше всего — при естественном свете. Хорошая фотография вызовет у людей доверие.</div>
+												</div>
 											</div>
 										</div>
+
+
+										<div class="section">
+											<div class="title">Изменение пароля</div>
+
+											<div class="columns">
+												<div class="line width1of3">
+													<div class="label">Текущий пароль</div>
+
+													<div class="field">
+														<input type="password" name="" value="" class="input">
+													</div>
+												</div>
+
+												<div class="line width1of3">
+													<div class="label">Новый пароль</div>
+
+													<div class="field">
+														<input type="password" name="" value="" class="input">
+													</div>
+												</div>
+
+												<div class="line width1of3">
+													<div class="label">Повторите пароль</div>
+
+													<div class="field">
+														<input type="password" name="" value="" class="input">
+													</div>
+												</div>
+											</div>
+										</div>
+
 
 										<div class="submit">
 											<button type="submit" class="submit_btn">СОХРАНИТЬ</button>
@@ -223,7 +260,7 @@
 						<div>
 							<div class="name">ВСЕ.РФ</div>
 							<div class="desc">БИРЖА УСЛУГ</div>
-							<img data-src="images/footer_logo.svg" alt="" class="lozad">
+							<img data-src="images/logo.svg" alt="" class="lozad">
 						</div>
 					</div>
 
@@ -298,6 +335,7 @@
 		<script src="js/nice-select.js"></script>
 		<script src="js/fancybox.min.js"></script>
 		<script src="js/clipboard.min.js"></script>
+		<script src="js/countdown.js"></script>
 		<script src="js/functions.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>

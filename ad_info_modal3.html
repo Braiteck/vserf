@@ -7,10 +7,47 @@
         <div class="location">Комсомольск-на-Амуре</div>
 
 		<div class="date">Сегодня, 22:45</div>
+
+        <div class="views">
+            <svg class="icon"><use xlink:href="images/sprite.svg#ic_views"></use></svg>
+            <span>345 (+11)</span>
+        </div>
     </div>
 
     <div class="description">
         <p>Продаю отличную машину. Все вопросы по телефону</p>
+    </div>
+
+    <div class="share">
+        <span>Поделиться:</span>
+
+        <div class="socials">
+            <button class="btn blue">
+                <svg class="icon icon1"><use xlink:href="images/sprite.svg#ic_share1"></use></svg>
+            </button>
+
+            <div class="dropdown">
+                <a href="/">
+                    <svg class="icon vkontakte"><use xlink:href="images/sprite.svg#ic_vkontakte"></use></svg>
+                </a>
+
+                <a href="/">
+                    <img src="images/ic_instagram.svg" alt="">
+                </a>
+
+                <a href="/">
+                    <svg class="icon facebook"><use xlink:href="images/sprite.svg#ic_facebook"></use></svg>
+                </a>
+
+                <a href="/">
+                    <svg class="icon odnokl"><use xlink:href="images/sprite.svg#ic_odnokl"></use></svg>
+                </a>
+            </div>
+        </div>
+
+        <button class="copy_text_btn btn green" data-clipboard-text="6666666666666666666666666666">
+            <svg class="icon icon2"><use xlink:href="images/sprite.svg#ic_share2"></use></svg>
+        </button>
     </div>
 
     <div class="bottom">
@@ -24,7 +61,7 @@
             </div>
         </div>
 
-        <button class="phone_btn" data-fancybox data-type="ajax" data-src="/ad_phone_modal.html">ПОКАЗАТЬ ТЕЛЕФОН</button>
+        <button class="phone_btn" data-fancybox data-type="ajax" data-src="/ad_phone_modal3.html">ПОКАЗАТЬ ТЕЛЕФОН</button>
 
         <a href="/" class="profile_link">
             <span>ПРОФИЛЬ</span>
@@ -78,6 +115,9 @@
                     prevEl: '.swiper-button-prev'
                 }
             })
+
+            // Копирование в буфер обмена
+            new ClipboardJS('.copy_text_btn')
         })
     </script>
 </section>
