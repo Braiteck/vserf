@@ -267,9 +267,11 @@ $(() => {
 							$(swiper.$el).find('.swiper-pagination-bullet').attr('data-slider', i)
 							i++
 
-							$('.swiper-pagination-bullet').on('mouseover', function () {
-								swiperSliders[parseInt($(this).data('slider'))].slideTo($(this).index() + 1)
-							})
+							if (!is_touch_device()) {
+								$('.swiper-pagination-bullet').on('mouseover', function () {
+									swiperSliders[parseInt($(this).data('slider'))].slideTo($(this).index() + 1)
+								})
+							}
 						})
 					}
 				}
