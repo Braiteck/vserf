@@ -251,7 +251,7 @@ $(() => {
 			swiperSliders = new Swiper('.ads_category .ad .swiper-container', {
 				loop: true,
 				speed: 500,
-				watchSlidesVisibility: true,
+				// watchSlidesVisibility: true,
 				slideActiveClass: 'active',
 				slideVisibleClass: 'visible',
 				spaceBetween: 0,
@@ -260,6 +260,14 @@ $(() => {
 					el: '.swiper-pagination',
 					type: 'bullets',
 					bulletActiveClass: 'active'
+				},
+				breakpoints: {
+					0: {
+						allowTouchMove: true
+					},
+					1024: {
+						allowTouchMove: false
+					}
 				},
 				on: {
 					init: swiper => {
